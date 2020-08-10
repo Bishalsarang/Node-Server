@@ -1,0 +1,9 @@
+{
+  "name": "Node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-leapfrog": "^3.0.0"
+  }
+}
