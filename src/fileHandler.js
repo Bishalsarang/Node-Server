@@ -4,6 +4,11 @@
  */
 const fileOperation = require('./fileOperation');
 
+/**
+ *
+ * @param {Object} response
+ * @param {String} fileName
+ */
 const handleRead = (response, fileName) => {
   fileOperation
     .read(fileName)
@@ -17,6 +22,12 @@ const handleRead = (response, fileName) => {
     .catch((err) => response.end(`<span style="background: red">Failed to read file ${err}</span> `));
 };
 
+/**
+ *
+ * @param {Object} response
+ * @param {String} fileName
+ * @param {String} content
+ */
 const handleWrite = (response, fileName, content) => {
   fileOperation
     .write(fileName, content)
@@ -24,6 +35,12 @@ const handleWrite = (response, fileName, content) => {
     .catch((err) => response.end('Failed to write file', err));
 };
 
+/**
+ *
+ * @param {Object} response
+ * @param {String} oldFileName
+ * @param {String} newFileName
+ */
 const handleRename = (response, oldFileName, newFileName) => {
   fileOperation
     .rename(oldFileName, newFileName)
@@ -31,6 +48,11 @@ const handleRename = (response, oldFileName, newFileName) => {
     .catch((err) => response.end('Failed to rename ' + err));
 };
 
+/**
+ *
+ * @param {Object} response
+ * @param {String} fileName
+ */
 const handleDelete = (response, fileName) => {
   fileOperation
     .del(fileName)
@@ -38,6 +60,10 @@ const handleDelete = (response, fileName) => {
     .catch((err) => response.end('Failed to delete file ' + err));
 };
 
+/**
+ *
+ * @param {Object} response
+ */
 const handleNotFound = (response) => {
   response.end(
     `Invalid Command. Please try following path for file operations:
