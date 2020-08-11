@@ -24,28 +24,4 @@ const del = (filePath) => {
   });
 };
 
-// write('./a.txt', 'Hello Node')
-//   .then(() => {
-//     console.log('File successfully written');
-//   })
-//   .catch((err) => console.log('Failed to write file', err));
-
-// read('./a.txt')
-//   .then((data) => {
-//     console.log('File successfully read: ', data);
-//   })
-//   .catch((err) => console.log('Failed to read file', err));
-
-// rename('./a.txt', './b.txt')
-//   .then(() => {
-//     console.log('File successfully renamed');
-//   })
-//   .catch((err) => console.log('Failed to rename file', err));
-
-// del('./b.txt')
-//   .then(() => {
-//     console.log('File successfully deleted');
-//   })
-//   .catch((err) => console.log('Failed to delete file', err));
-
 module.exports = { read, write, rename, del };
