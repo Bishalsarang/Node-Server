@@ -11,7 +11,7 @@ const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 
 const server = http.createServer((request, response) => {
-  const [_, operationType, param1, param2] = request.url.split('/');
+  const [_, operationType, param1, param2] = decodeURIComponent(request.url).split('/');
 
   response.writeHead(constants.SUCCESS, {
     'content-type': 'text/html',
